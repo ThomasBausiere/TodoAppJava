@@ -1,19 +1,21 @@
 package org.example.model;
 
 public class Todo {
-    private int id;
+    private int id =1;
     private String name;
     private String description;
-    private boolean done;
+    private boolean done=false;
 
     //TODO apres implémentation du service revenir pour ne pas avoir rentrer l'id
     //TODO voir gestion toggle
-    public Todo(int id, String name, String description, boolean done) {
-        this.id = id;
+    public Todo( String name, String description) {
+        id++;
         this.name = name;
         this.description = description;
-        this.done = done;
+
     }
+
+
 
     public int getId() {
         return id;
